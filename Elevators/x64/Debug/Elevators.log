@@ -1,5 +1,3 @@
 ﻿  Elevator.cpp
-C:\Users\timfe\Documents\MASTERS\C++\Elevators\Elevator.cpp(46,30): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
-  Simulator.cpp
-  Generating Code...
-  Elevators.vcxproj -> C:\Users\timfe\Documents\MASTERS\C++\Elevators\x64\Debug\Elevators.exe
+C:\Users\fergutr1\Documents\MyStuff\Masters\Classes\Fall 2024\C++\Elevators\Elevator.cpp(36,30): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+  Elevators.vcxproj -> C:\Users\fergutr1\Documents\MyStuff\Masters\Classes\Fall 2024\C++\Elevators\x64\Debug\Elevators.exe

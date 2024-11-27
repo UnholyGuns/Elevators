@@ -12,7 +12,7 @@ int main(void) {
     int numFloors = 100;
 
     Simulator sim(numFloors, numElevators);
-    sim.loadData("C:\\Users\\timfe\\Documents\\MASTERS\\C++\\Elevators\\Mod10_Assignment_Elevators.csv");
+    sim.loadData("C:\\Users\\fergutr1\\Documents\\MyStuff\\Masters\\Classes\\Fall 2024\\C++\\Elevators\\Mod10_Assignment_Elevators.csv");
     sim.run();
 
     std::cout << "Average Wait Time: " << sim.calculateAvgWaitTime() << " seconds\n";

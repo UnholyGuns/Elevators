@@ -68,27 +68,21 @@ void Simulator::run()
                 int minimumPassengers = std::numeric_limits<int>::max(); // Set an initial large value
 
                 for (const auto& elevator : elevatorList) {
-                    if (elevator->pickupRequests.size() < Elevator::MAX_CAPACITY && elevator->pickupRequests.size() < minimumPassengers) {
+                    if (elevator->pickupRequests.size() < minimumPassengers) {
                         selectedElevator = elevator;
                         minimumPassengers = elevator->pickupRequests.size();
                     }               
                 }
 
                 // Add the passenger's start floor as a request for the closest non-full elevator
-                if (selectedElevator != nullptr) {
-                    selectedElevator->addPickupRequest(passenger->startFloor);
-                    passenger->assignedToElevator = true;
-                }
+                selectedElevator->addPickupRequest(passenger->startFloor);
+                passenger->assignedToElevator = true;        
             }           
         }
 
         // Update each elevator
         for (auto& elevator : elevatorList) {
-            elevator->updateStatus();
-            if (elevator->status == Elevator::MOVING_UP || elevator->status == Elevator::MOVING_DOWN) {
-                elevator->move();
-            }
-            elevator->stop(floorList, sysTime);
+            elevator->updateStatus(floorList, sysTime);
         }
 
         sysTime++;

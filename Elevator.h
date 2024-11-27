@@ -31,6 +31,7 @@ public:
 
 	int ID;
 	int currentFloor = 0;
+	int targetFloor = 0;
 	int stopTimer = STOPPING_TIME;
 	int movingTimer = 0;
 
@@ -47,8 +48,8 @@ public:
 	// Elevator methods
 	void move();
 	void stop(std::vector<std::shared_ptr<Floor>>& floors, int time);
-	void updateStatus();
+	void updateStatus(std::vector<std::shared_ptr<Floor>>& floors, int time);
 	void addPickupRequest(int floor);
-	void addDroppoffRequest(int floor);
+	void addDropoffRequest(int floor);
 
 };
